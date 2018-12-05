@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="sendMoneyBalance" prefHeight="389.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProfileController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="191.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="206.0" style="-fx-background-color: linear-gradient(#36D1DC,#5B86E5);">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="191.0" layoutX="21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/profile.png" />
+                     </image>
+                  </ImageView>
+                  <Label id="profileLabel" layoutX="66.0" layoutY="207.0" onMouseClicked="#hanldleTabClick" styleClass="tabLabel" text="Home" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="sendMoneyLabel" layoutX="42.0" layoutY="261.0" onMouseClicked="#hanldleTabClick" prefHeight="24.0" prefWidth="126.0" styleClass="tabLabel" text="Send Money" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="transactionsLabel" layoutX="42.0" layoutY="292.0" onMouseClicked="#hanldleTabClick" styleClass="tabLabel" text="Transactions" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="balanceLabel" fx:id="balanceLabel" layoutX="58.0" layoutY="233.0" onMouseClicked="#hanldleTabClick" styleClass="tabLabel" text="Balance" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button id="logoutBtn" fx:id="logoutBtn" layoutX="35.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="25.0" prefWidth="116.0" styleClass="btn" text="Logout" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Pane id="profileTab" layoutX="185.0" layoutY="100.0" prefHeight="407.0" prefWidth="424.0" styleClass="tabs" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="0.0" fx:id="xxx">
+         <children>
+            <Label layoutX="150.0" layoutY="76.0" styleClass="primaryLabel" text="WELCOME" textFill="#c68787">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="hmFname" layoutX="117.0" layoutY="126.0" styleClass="secondaryLabel" text="FIRSTNAME" textFill="#da3636">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="hmLname" layoutX="232.0" layoutY="126.0" styleClass="secondaryLabel" text="LNAME" textFill="#c93838">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox layoutY="280.0" prefHeight="119.0" prefWidth="408.0">
+               <children>
+                  <AnchorPane prefHeight="119.0" prefWidth="406.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="19.0" styleClass="primaryLabel" text="ACCOUNT NUMBER: " textFill="#dd9696">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="hmAccNum" layoutX="203.0" layoutY="20.0" styleClass="secondaryLabel" text="12345678" textFill="#8a1616">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="115.0" layoutY="53.0" styleClass="primaryLabel" text="BRANCH:" textFill="#ff5c5c">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="hmbranch" layoutX="203.0" layoutY="53.0" styleClass="secondaryLabel" text="MANGALORE" textFill="#5e0b0b">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="148.0" layoutY="85.0" styleClass="primaryLabel" text="iFSC:" textFill="#d71313">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="hmIfsc" layoutX="203.0" layoutY="85.0" styleClass="secondaryLabel" text="12334">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane id="sendMoneyTab" layoutX="185.0" prefHeight="400.0" prefWidth="415.0" style="-fx-background-color: #333;" styleClass="tabs" visible="false">
+         <children>
+            <Label layoutX="145.0" layoutY="47.0" styleClass="primaryLabel" text="Send money" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sendAccNo" layoutX="181.0" layoutY="134.0" styleClass="textInput" />
+            <Label layoutX="22.0" layoutY="137.0" prefHeight="20.0" prefWidth="150.0" text="account Number:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="90.0" layoutY="191.0" prefHeight="20.0" prefWidth="74.0" text="Amount:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sendAmount" layoutX="181.0" layoutY="188.0" styleClass="textInput" />
+            <Button id="sendMoneyBtn" layoutX="119.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleSendMoney" prefHeight="25.0" prefWidth="116.0" styleClass="btn" text="Send" />
+            <Label layoutX="39.0" layoutY="340.0" prefHeight="15.0" prefWidth="337.0" styleClass="failure" text="Please make sure that entered details are correct." textFill="WHITE" />
+            <Label layoutX="115.0" layoutY="361.0" styleClass="failure" text="This process is irreversible." textFill="WHITE" />
+            <Label layoutX="22.0" layoutY="90.0" text="Current Balance:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="sendMoneyBal" layoutX="181.0" layoutY="90.0" styleClass="amount" text="Rs.1000" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="errSendMoney" layoutX="66.0" layoutY="310.0" styleClass="failure" textFill="WHITE" />
+            <Label fx:id="sussMsgSendMoney" layoutX="110.0" layoutY="310.0" styleClass="success" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane id="balanceTab" layoutX="185.0" prefHeight="400.0" prefWidth="415.0" style="-fx-background-color: #333;" styleClass="tabs" visible="false">
+         <children>
+            <Label layoutX="72.0" layoutY="88.0" prefHeight="26.0" prefWidth="271.0" styleClass="primaryLabel" text="Your account balance is " textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="43.0" layoutY="46.0" text="Balance">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentBalance" layoutX="163.0" layoutY="152.0" styleClass="amount" text="Rs.1500" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="211.0" styleClass="primaryLabel" text="As on:" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentTime" layoutX="159.0" layoutY="211.0" styleClass="secondaryLabel" text="03/09/18 20:13" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane id="transactionsTab" layoutX="176.0" prefHeight="400.0" prefWidth="424.0" style="-fx-background-color: #333;" styleClass="tabs" visible="false">
+         <children>
+            <Label layoutX="159.0" layoutY="9.0" prefHeight="35.0" prefWidth="125.0" styleClass="primaryLabel" text="Transactions" textFill="#ebd8d8">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <VBox fx:id="transTable" layoutX="-1.0" layoutY="60.0" prefHeight="340.0" prefWidth="424.0" />
+            <Label layoutY="44.0" text=" From/To" textFill="WHITE" />
+            <Label layoutX="191.0" layoutY="44.0" text="Amount" textFill="WHITE" />
+            <Label layoutX="67.0" layoutY="44.0" text="Type" textFill="WHITE" />
+            <Label layoutX="312.0" layoutY="44.0" text="Time" textFill="WHITE" />
+            <Label layoutX="128.0" layoutY="44.0" text="From/To" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

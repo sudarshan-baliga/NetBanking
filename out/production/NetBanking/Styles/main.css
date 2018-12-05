@@ -1,0 +1,49 @@
+.textInput {
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-border-width: 3;
+    -fx-border-color: #fff #fff #fff #fff;
+    -fx-prompt-text-fill: #fff;
+    -fx-text-fill: #fff;
+}
+
+.tabs {
+    -fx-background-color: #2B2B2B;
+}
+
+.primaryLabel {
+    -fx-text-fill: #36D1DC;
+}
+
+.secondaryLabel {
+    -fx-text-fill: #B6B6B6;
+}
+
+.amount, .success {
+    -fx-text-fill: #02C54A;
+}
+
+.failure {
+    -fx-text-fill: #b13933;
+}
+
+.btn {
+    -fx-background-color: #02C54A;
+    -fx-border-width: 3;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+}
+
+#logoutBtn {
+    -fx-background-color: red;
+}
+
+.transaction {
+    -fx-wrap-text: true;
+    -fx-text-fill: #02C54A;
+    -fx-padding: 10;
+}
+
+.tabLabel:hover{
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
